@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: rgb(4, 32, 28);
+            flex-wrap: wrap;
+            animation: down 1s;
+        }
+        @keyframes down {
+            from{
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+        .proj{
+            width: 250px;
+            aspect-ratio: 1/1;
+            box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 60px -12px, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px; 
+            margin: 2%;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: scale 1.5s;
+        }
+        .proj :hover{
+            scale: 1.08;
+        }
+        .head{
+            width: 100%;
+            height: 20%;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            font-family: cursive;
+        }
+        .primg{
+            width: 100%;
+            height: 80%;
+            border-radius: 20px;
+            background-color: greenyellow;
+        }
+        .primg img{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+        @media (width<850px) 
+        {
+            .proj{
+                width: 75vw;
+            }
+            .head{
+                font-size: clamp(1.2rem,2vw,1.8rem);
+                align-content: center;
+                height: 30%;
+            }
+            .primg{
+                height: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="proj" onclick="loadp('https://github.com/ShivendraSinha418/Email-Spam-Classifier/tree/main')">
+        <div class="head">Email Spam Classifier</div>
+        <div class="primg"><img src="https://dataaspirant.com/wp-content/uploads/2020/07/Email-classifier-spacy-python-final.png" alt=""></div>
+    </div>
+    <div class="proj" onclick="loadp('https://github.com/ShivendraSinha418/Temperature_Predicion')">
+        <div class="head">Temperature Prediction</div>
+        <div class="primg"><img src="https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2024/05/AdobeStock_355005268-scaled.jpeg?size=*:900" alt=""></div>
+    </div>
+    <div class="proj" onclick="loadp('https://github.com/ShivendraSinha418/House_price_Prediction')">
+        <div class="head">House Price Prediction</div>
+        <div class="primg"><img src="https://miro.medium.com/v2/resize:fit:704/0*S0RD9WszR44AbOds.png" alt=""></div>
+    </div>
+    <div class="proj" onclick="loadp('https://github.com/ShivendraSinha418/Fake-news-Classifier')">
+        <div class="head">Fake News Classifier</div>
+        <div class="primg"><img src="https://c.ndtvimg.com/2023-04/m1pp5ff_fake-news-generic-pixabay_625x300_07_April_23.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738" alt=""></div>
+    </div>
+    <script>
+        function loadp(url){
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>

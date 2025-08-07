@@ -1,0 +1,750 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+}
+:root{
+    --expand:90%;
+    --headfont:clamp(0.7rem,2.5vw,1.2rem);
+    --bgcol:rgb(4, 32, 28);
+    --txtcol:white;
+    --bdr:1px solid white;
+    --highlightcol:rgb(145, 245, 15);
+    --scrwidth:30vw;
+    --scrheight:5vh;
+    --htmlscr:90%;
+    --cssscr:70%;
+    --jsscr:60%;
+    --njscr:50%;
+    --mdbscr:30%;
+    --sqlscr:70%;
+    --mlscr:80%;
+    --javscr:60%;
+    --pyscr:50%;
+    --respwidth:850px;
+    --introwidth:500px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--bgcol);
+    color: var(--txtcol);
+    overflow-x: hidden;
+}
+.htcont{
+    width: 25%;
+    aspect-ratio: 1/1;
+    justify-items: center;
+    align-content: center;
+    border-radius: 20px;
+    
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*                                  NAV SECTION STARTS HERE*/
+nav{
+    width: 90vw;
+    height: 5vh;
+    margin-block: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    animation: down 3s;
+}
+.navitems{
+    width: 8%;
+    align-content: center;
+    text-align: center;
+    font-size: var(--headfont);
+    /* border: var(--bdr); */
+    cursor: pointer;
+    margin-inline: 2%;
+}
+.navitems:last-child{
+    background-color:var(--highlightcol);
+    color: var(--bgcol);
+    border-radius: 35px;
+    width: 18%;
+    aspect-ratio: 30/1;
+    margin-right: 0%;
+}
+/*                                  NAV SECTION ENDS HERE*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*                                  INTRO SECTION STARTS HERE*/
+.intro{
+    width: var(--expand);
+    height: fit-content;
+    /* border: var(--bdr); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10%;
+    margin-bottom: 3%;
+}
+.introtxt{
+    width: var(--introwidth);
+    aspect-ratio: 10/9;
+    /* border: var(--bdr); */
+    margin-inline:2%;
+    text-align: justify;
+    align-content: center;
+    animation: rightslide 2s;
+}
+@keyframes rightslide {
+    from{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+.introtxt h2{
+    font-size: clamp(1.3rem,2.5vw,3rem);
+    color: var(--highlightcol);
+}
+#p1{
+    color : white;
+}
+.introtxt p{
+        font-size: clamp(1.9rem,2.5vw,3rem);
+    color: var(--highlightcol);
+    display: inline;
+}
+.introtxt pre{
+    font-size: var(--headfont);
+}
+#pre2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(0.9rem,1.5vw,1rem);
+    color: white;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    align-items: center;
+}
+.intropic{
+    width: 40%;
+    aspect-ratio: 5/3;
+    /* border: var(--bdr); */
+    margin-inline: 2%;
+}
+.logo{
+    border-radius: 35%;
+    animation: slide 2s;
+}
+@keyframes slide {
+    from{
+        opacity: 0;
+        transform: translateX(60%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(30%);
+    }
+
+}
+.intropic img{
+    width: 80%;
+    aspect-ratio: 1/1;
+    transform: translateX(30%);
+
+}
+/*                                              INTRO SECTION ENDS HERE*/
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*                                              SKILL BLOCK STARTS HERE*/
+.skills{
+    width: 85vw;
+    height: auto;
+    /* border: var(--bdr); */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.skset{
+    width:75%;
+    height: auto;
+}
+.myhead{
+    text-align:justify;
+    font-size:clamp(2.8rem,4vw,4rem);
+    font-weight: 500;
+    color: var(--highlightcol);
+    font-family:  'Courier New', Courier, monospace;
+}
+.t{
+    color: white;
+}
+
+.skblock{
+    width: 40vw;
+    height: 8vh;
+    /* border: var(--bdr); */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    gap: 10%;
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+.headtp{
+    margin-right: 10%;
+    color: var(--highlightcol);
+    margin-top: 3%;
+}
+.scrblock{
+    width: var(--scrwidth);
+    aspect-ratio: 38/1;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 20px;
+    right: 0;
+box-shadow: rgba(255, 255, 255, 0.2) 0px 5px 15px;
+    border: var(--bdr);
+}
+.skblock h3{
+    font-size: clamp(0.9rem,1.5vw,1.5rem);
+    font-family: cursive;
+}
+.score{
+    height: 100%;
+    background-color: var(--highlightcol);
+    border-radius: 20px;
+    text-align: right;
+    font-size: clamp(0.1rem,0.6vw,0.6rem);
+}
+.skblock:nth-child(1) .score{width: var(--htmlscr);}
+.skblock:nth-child(2) .score{width: var(--cssscr);}
+.skblock:nth-child(3) .score{width: var(--jsscr);}
+.skblock:nth-child(4) .score{width: var(--njscr);}
+.skblock:nth-child(5) .score{width: var(--mdbscr);}
+.skblock:nth-child(6) .score{width: var(--sqlscr);}
+.skblock:nth-child(7) .score{width: var(--mlscr);}
+.skblock:nth-child(8) .score{width: var(--javscr);}
+.skblock:nth-child(9) .score{width: var(--pyscr);}
+@keyframes fillscr {from{width: 0%;}}
+/*                                              SKILL BLOCK ENDS HERE*/
+/*------------------------------------------------------------------------------------------------------------------*/
+/*                                              PROJECT BLOCK STARTS HERE*/
+.projects{
+    width: var(--expand);
+    height: 80vh;
+    /* border: var(--bdr); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.projects .myhead{
+    text-align:start;
+    font-size:clamp(2.8rem,4vw,4rem);
+    font-weight: 500;
+    color: var(--highlightcol);
+    font-family:  'Courier New', Courier, monospace;
+}
+.procont{
+width: 75%;
+display: flex;
+flex-direction: row;
+justify-content: end;
+}
+.tpsblock{
+    width:55vw;
+    height: 65vh;
+    gap: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.topic{
+    width: 25vw;
+    height: auto;
+    border: var(--bdr);
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.05) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+    cursor: pointer;
+}
+.topiclogo{
+    height: 25%;
+    padding-top: 2%;
+    text-align: center;
+    align-content: center;
+    font-size: var(--headfont);
+}
+.topiclogo img{
+    width: 15%;
+    aspect-ratio: 1/1;
+    background-color: wheat;
+    border-radius: 50%;
+}
+.topic p{
+    text-align: center;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    padding-inline: 4%;
+    word-spacing: 1px;
+    font-family: "Playwrite AU SA", cursive;
+     font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+.projdetails{
+    width: var(--expand);
+    height: 100vh;
+    border: none;
+    display: none;
+    margin-top: 2%;
+}
+/*                                              PROJECT BLOCK ENDS HERE*/
+/*------------------------------------------------------------------------------------------------------------------*/
+/*                                              SERVICES BLOCK STARTS HERE*/
+.service{
+    width: 90vw;
+    height: auto;
+    /* border: var(--bdr); */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+.serv{
+    width: 13vw;
+    /* height: 28vh; */
+    aspect-ratio: 1/1;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+    border-radius: 20px;
+    margin: 2%;
+    transition-property: scale transform;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+.service .htcont{
+    width: 55%;
+    justify-content: end;
+}
+.servb{
+    width: 50vw;
+    aspect-ratio: 25/1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.serv:nth-child(2){
+    background-color: var(--highlightcol);
+    color: var(--bgcol);
+    transform: translateY(-15%);
+    color: var(--bgcol);
+}
+.svhd{
+    height: 35%;
+    /* background-color: red; */
+    border-radius: 20px;
+    text-align: center;
+}
+.svhd img{
+    width: 30%;
+    height: 90%;
+}
+.svcd{
+    text-align: center;
+    padding: 2%;
+}
+.svcd p{
+    margin-top: 8%;
+    text-align: center;
+    font-size: clamp(0.58rem,3.5vw,0.6rem);
+    word-spacing: 8px;
+    letter-spacing: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.serv:hover{
+    scale: 1.09;
+    transform: translateY(-9%);
+}
+/*                                              SERVICES BLOCK ENDS HERE*/
+/*------------------------------------------------------------------------------------------------------------------*/
+.education{
+    width: 90vw;
+    height: 80vh;
+    /* border: var(--bdr); */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 5%;
+    position: relative;
+    margin-block: 6%;
+}
+.edcont{
+    width: 70%;
+    height: 100%;
+    margin-left: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: var(--bdr); */
+}
+.std{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inst{
+    width: 80%;
+    opacity: 0.8;
+    align-content: center;
+}
+.stdblk{
+    width: 90%;
+    height: 15%;
+    border: var(--bdr);
+    border-radius: 20px;
+    margin-block: 5%;
+    text-align: center;
+    align-content: center;
+    font-size: clamp(1.4rem,2vw,2rem);
+    color: white;
+    cursor: pointer;
+    transition: scale 1s;
+}
+
+.stdblk:hover{
+    background-color: var(--highlightcol);
+    color: white;
+    scale: 1.07;
+}
+/*                                              EDUCATION BLOCK ENDS HERE*/
+/*------------------------------------------------------------------------------------------------------------------*/
+/*                                              CONTACT BLOCK STARTS HERE*/
+.contact{
+    width: var(--expand);
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-bottom: 3%;
+}
+.contblk{
+    width: 40%;
+    height: 90%;
+    /* border: var(--bdr); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cont{
+    width: 90%;
+    height: 30%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.contmail{
+    width: 60%;
+    height: 90%;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.mm{
+    width: 90%;
+    height: 12%;
+    margin-block: 2%;
+    border: var(--bdr);
+    border-radius: 20px;
+    background-color: var(--bgcol);
+    color: var(--highlightcol);
+    padding-left: 5%;
+    font-size: clamp(0.6rem,2vw,1.3rem);
+}
+.text{
+    width: 90%;
+    height: 25%;
+    border: var(--bdr);
+    border-radius: 20px;
+    background-color: var(--bgcol);
+    color: var(--highlightcol);
+    padding-left: 5%;
+    font-size: clamp(0.6rem,2vw,1.3rem);
+    text-align: start;
+}
+input::-webkit-input-placeholder {
+  color: var(--highlightcol);
+  opacity: 0.5;
+}
+.contmail button{
+    width: 20%;
+    aspect-ratio: 3/1;
+    background-color: var(--highlightcol);
+    margin-top: 1%;
+    border-radius: 10px;
+}
+.cont img{
+    width: 40%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: 0;
+}
+.icn{
+    width: 30%;
+    position: relative;
+}
+.icdet p{
+    align-items: end;
+}
+.icdet p:nth-child(1){
+    font-size: clamp(0.8rem,2vw,1.8rem);
+}
+.contact .myhead{
+    text-align: justify;
+}
+@keyframes topos {
+    from{
+        transform: translateX(30%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(8%);
+    }
+}
+/*                                              CONTACT BLOCK ENDS HERE*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+footer {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 40px 30px 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100vw;
+    height: 30%;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25%;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .footer-container h3, .footer-container h4 {
+    margin-bottom: 15px;
+  }
+
+  .footer-about, .footer-links, .footer-contact {
+    flex: 1 1 250px;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+  }
+
+  .footer-links ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-links ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links ul li a:hover {
+    color: #40e055;
+  }
+
+  .social-icons a {
+    color: #ddd;
+    text-decoration: none;
+    margin-right: 8px;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: #00bcd4;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  .footer-contact p a{
+    color: #40e055;
+  }
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+@media(width< 900px){
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        display: none;
+    }
+    .contact{
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .contmail button{
+        aspect-ratio: 2/1;
+    }
+    .contmail{
+        width: 90vw;
+        aspect-ratio: 1/1;
+    }
+    .contblk{
+        width: 90vw;
+        height: 50vh;
+    }
+    .cont img{
+        width: 30%;
+        margin-right: 4%;
+    }
+    .introtxt{
+    width: 80vw;
+    align-items: center;
+    align-content: center;
+    }
+    .intropic{
+        width: 80vw;
+    }
+    .intropic img{
+        transform: translateX(8%);
+        width: 90%;
+        aspect-ratio: 1/1;
+        animation: topos 1s;
+    }
+    .skills{
+        flex-direction: column-reverse;
+    }
+    .skset{
+        width: 85%;
+    }
+    .skblock{
+        width: 100%;
+    }
+    .skblock h3{
+        font-size: 1rem;
+    }
+    .projects{
+        flex-direction: column;
+        justify-content: start;
+        height: 100vh;
+        margin-bottom: 12%;
+    }
+    .topic{
+        width: 80vw;
+        min-height: 15vh;
+        height: auto;
+    }
+    .service{
+        flex-direction: column-reverse;
+    }
+    .serv{
+        width: 100%;
+        height: auto;
+        margin-block: 10%;
+    }
+    .svcd p{
+        font-size: 1rem;
+    }
+    .serv:nth-child(2){
+        transform: translateY(0%);
+        background-color: var(--bgcol);
+        color: white;
+    }
+    .servb{
+        width: 70vw;
+    }
+    .education{
+        width: 100vw;
+        flex-direction: column;
+        justify-content: start;
+        margin-bottom: 10vh;
+    }
+    .edcont{
+        width: 90%;
+        margin-left: 0%;
+        flex-direction: column;
+        justify-content: start;
+
+    }
+    .myframe{
+        min-height: 400px;
+    }
+    .stdblk{
+        width: 40%;
+        height: 60%;
+        margin-inline: 2%;
+    }
+    .std{
+        width: var(--expand);
+        height: 10vh;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2%;
+    }
+    .scrblock{
+        height: 1.3vh;
+    }
+    .inst{
+        width: 100%;
+        height: 50%;
+    }
+    .topic{
+        height: auto;
+    }
+    .tpsblock{
+        width: 70vw;
+        height: 70vh;;
+    }
+    .topiclogo img{
+        width: 13%;
+        aspect-ratio: 1/1;
+    }
+    .mm{
+        height: 20%;
+        font-size: 1.2rem;
+    }
+    .text{
+        height: 20%;
+        font-size: 1.2rem;
+    }
+}
+@media (height < 800) {
+    .mm{
+        height: 15%;
+    }
+    .text{
+        height: 15%;
+    }
+    .contact {
+        background-color: red;
+    }
+}

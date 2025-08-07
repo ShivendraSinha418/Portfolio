@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: rgb(4, 32, 28);
+            flex-wrap: wrap;
+            animation: down 1s;
+        }
+        @keyframes down {
+            from{
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+        .proj{
+            width: 250px;
+            aspect-ratio: 1/1;
+            box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 60px -12px, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px; 
+            margin: 2%;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: scale 1.5s;
+        }
+        .proj :hover{
+            scale: 1.08;
+        }
+        .head{
+            width: 100%;
+            height: 20%;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            font-family: cursive;
+        }
+        .primg{
+            width: 100%;
+            height: 80%;
+            border-radius: 20px;
+            background-color: greenyellow;
+        }
+        .primg img{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+        @media (width<850px) 
+        {
+            .proj{
+                width: 75vw;
+            }
+            .head{
+                font-size: clamp(1.2rem,2vw,1.8rem);
+                align-content: center;
+                height: 30%;
+            }
+            .primg{
+                height: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="proj" onclick="loadp('https://github.com/ShivendraSinha418/Quizora/tree/main')">
+        <div class="head">Quizora</div>
+        <div class="primg"><img src="https://digitalmedianinja.com/wp-content/uploads/2023/11/How-to-Create-a-Quiz-in-WordPress.jpg" alt=""></div>
+    </div>
+    <div class="proj" onclick="loadp('https://github.com/ShivendraSinha418/Todo-List-/tree/main')">
+        <div class="head">To-do list</div>
+        <div class="primg"><img src="https://sloboda-studio.com/wp-content/uploads/2020/10/image22.jpeg" alt=""></div>
+    </div>
+    <div class="proj" onclick="loadp('https://www.openai.com')">
+        <div class="head">Portfolio</div>
+        <div class="primg"><img src="https://essential-addons.com/wp-content/uploads/2021/05/arsitst-website-acrylic.png" alt=""></div>
+    </div>
+    <div class="proj" onclick="loadp('https://github.com/ShivendraSinha418/Weather_application')">
+        <div class="head">Weather Application</div>
+        <div class="primg"><img src="https://ucarecdn.com/6320962b-d4bf-4cfc-a66c-7972492f77c0/" alt=""></div>
+    </div>
+    <div class="proj" onclick="loadp('https://github.com/ShivendraSinha418/paradise_nursery?tab=readme-ov-file')">
+        <div class="head">Nursery E-commerce Application</div>
+        <div class="primg"><img src="https://www.urbanplant.in/cdn/shop/files/Primary11copy_8326647c-17c5-4a08-bd81-accb0aa06716.webp?v=1688544054" alt=""></div>
+    </div>
+    <script>
+        function loadp(url){
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>
