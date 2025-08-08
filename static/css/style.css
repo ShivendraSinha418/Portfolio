@@ -17,13 +17,13 @@ html{
     --scrheight:5vh;
     --htmlscr:90%;
     --cssscr:70%;
-    --jsscr:60%;
+    --jsscr:80%;
     --njscr:50%;
-    --mdbscr:30%;
+    --mdbscr:45%;
     --sqlscr:70%;
     --mlscr:80%;
-    --javscr:60%;
-    --pyscr:50%;
+    --javscr:70%;
+    --pyscr:67%;
     --respwidth:850px;
     --introwidth:500px;
 }
